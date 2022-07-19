@@ -17,6 +17,7 @@
 body{
     background-color: white;
     font-family: var(--fuente);
+    width: 100vw;
 }
 
 body::-webkit-scrollbar{
