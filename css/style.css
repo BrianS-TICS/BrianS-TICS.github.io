@@ -322,8 +322,14 @@ header h1{
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 12rem;
+    height: 5rem;
     width: 100%;
+}
+
+@media (min-width: 768px) {
+    .wave{
+        height: 12rem;
+    }
 }
 
 @media (min-width: 768px) {
@@ -345,36 +351,81 @@ header h1{
     Habilidades
 */
 
-.habilidades-titulo{
-    display: inline-block;
+@media (min-width: 1280px) {
+    .habilidades-titulo{
+        display: inline-block;
+    }
 }
 
 .habilidades h3{
-    font-size: 4rem;
-    margin: 1rem 0;
+    font-size: 3rem;
+    text-align: center;
+    margin: 0 0;
+}
+
+@media (min-width: 1280px) {
+    .habilidades h3{
+        font-size: 4rem;
+        margin: 1rem 0;
+    }
 }
 
 .habilidades h4{
-    font-size: 2rem;
-    margin: 3rem 0 1rem 0;
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 1.2rem 0 0 0;
+}
+
+@media (min-width: 1280px) {
+    .habilidades h4{
+        text-align: left;
+        font-size: 2rem;
+        margin: 3rem 0 1rem 0;
+    }
+    
 }
 
 .division{
+    margin: 0 auto;
     border-radius: 5px;
     height: .2rem;
     width: 50%;
     background-image: radial-gradient(circle at 50% -20.71%, #de9c2c 0, #e5922a 8.33%, #ea852b 16.67%, #ee772d 25%, #f16731 33.33%, #f35436 41.67%, #f23c3c 50%, #f01843 58.33%, #ed004c 66.67%, #e90057 75%, #e30064 83.33%, #db0071 91.67%, #d10080 100%);
 }
 
+@media (min-width: 768px) {
+    .division{
+        width: 25%;
+    }
+}
+
+@media (min-width: 1280px) {
+    .division{
+        margin: 0 0;
+        width: 50%;
+    }
+}
+
 
 /*Carta*/
 .cartas-logo{
-    display: flex;
+    display: block;
     gap: 1rem;
 }
 
+@media (min-width: 1280px) {
+    .cartas-logo{
+        display: flex;
+    }
+}
+
 .carta-logo:first-of-type{
-    padding-left: 0;
+    
+}
+
+.cartas-logo-trio{
+    display: flex;
+    justify-content: center;
 }
 
 .carta-logo img{
@@ -397,24 +448,51 @@ header h1{
 
 .contenedor-titulo{
     display: flex;
+    justify-content: center;
 }
 
 .division2{
     border-radius: 5px;
     height: .2rem;
-    width: 50%;
-    margin-left: auto;
+    width: 70%;
+    margin: 0 auto;
     background-image: radial-gradient(circle at 50% -20.71%, #de9c2c 0, #e5922a 8.33%, #ea852b 16.67%, #ee772d 25%, #f16731 33.33%, #f35436 41.67%, #f23c3c 50%, #f01843 58.33%, #ed004c 66.67%, #e90057 75%, #e30064 83.33%, #db0071 91.67%, #d10080 100%);
 }
+
+@media (min-width: 1280px) {
+    .division2{
+        width: 50%;
+        margin-left: auto;
+    }
+}
+
 .proyectos-titulo{
-    display: inline-block;
-    margin-left: auto;
-    justify-content: right;
+    display: block;
+}
+
+@media (min-width: 1280px) {
+    .proyectos-titulo{
+        display: inline-block;
+        margin-left: auto;
+        justify-content: right;
+    }    
 }
 
 .proyectos h3{
     margin: 1rem 0;   
-    font-size: 4rem;
+    text-align: center;
+    font-size: 3rem;
+}
+
+@media (min-width: 1280px) {
+    .proyectos h3{
+        margin: 1rem 0;   
+        font-size: 4rem;
+    }
+}
+
+.proyecto-imagen img{
+    width: 100%;
 }
 
 .cartas-proyectos{
@@ -424,52 +502,48 @@ header h1{
 }
 
 .carta-proyecto{
-    width: 25rem;
-    height: 25rem;
-    border-radius: 5px;
-    background-color: var(--blanco);
-    border: .1rem rgba(128, 128, 128, 0.355) solid;
-
+    max-width: 20rem;
+    max-height: 30rem;
+    padding: 1rem;
+    border: .1rem rgba(128, 128, 128, 0.20) solid;
+    /* background-color: rgba(128, 128, 128, .20); */
+    text-align: center;
+    border-radius: 10px;
 }
 
-.imagen-proyecto{
-    height: 70%;
-    background-image: url(../img/PaginasWeb/walmart.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 2px;
-}
-
-.texto-proyecto{
-    padding-right: 1rem;
-}
-
-.texto-proyecto h4{
-    margin: 0;
-    font-size: 1.5rem;
-}
-
-.entrada-proyecto{
-    margin: 1rem 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.texto-proyecto p{
-    margin: .5rem 0 0 0;
+.carta-proyecto h4{
     font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 0;
+    font-weight: bold;
 }
 
-.logo-proyecto img{
-    width: 2.5rem;
-    border-radius: 10rem;
+.carta-proyecto p{
+    font-size: .8rem;
+    font-weight: normal;
+    margin-top: .8rem;
+    font-weight: bold;
 }
 
-.logo-proyecto img:hover{
-    cursor: pointer;
+.proyecto-iconos{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
+
+.proyecto-enlace{
+    max-width: 2rem;
+    max-height: 2rem;
+    border-radius: 100%;
+    background-color: #d1d5c135;
+    padding: .8rem;
+}
+
+.proyecto-enlace img{
+    width: 100%;
+}
+
 
 footer{
     background-color: #000;
