@@ -1,0 +1,480 @@
+:root{
+    --color1 : #5EC2A8;
+    --color2 : #6551A4;
+    --color3 : #009FC2;
+    --blanco : #FFFFFF;
+    --negro : #000;
+    --color-fondo : #d1d5c1;
+
+    --fuente : 'Libre Franklin', sans-serif;
+    --Delgado : 100;
+    --Regular : 400;
+    --Grueso : 700;
+}
+
+
+
+body{
+    background-color: white;
+    font-family: var(--fuente);
+}
+
+body::-webkit-scrollbar{
+    display:none;
+}
+
+@media (min-width: 1280px) {
+    body::-webkit-scrollbar{
+        display: block;
+        background-color: var(--negro);
+        width: 5px;
+    }
+}
+
+body::-webkit-scrollbar:horizontal{
+    display: none;
+}
+
+
+body::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 2px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--negro);
+}
+
+img{
+    width: auto;
+    margin: 0 auto;
+}
+
+.bg-1{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: radial-gradient(circle at 50% -20.71%, #de9c2c 0, #e5922a 8.33%, #ea852b 16.67%, #ee772d 25%, #f16731 33.33%, #f35436 41.67%, #f23c3c 50%, #f01843 58.33%, #ed004c 66.67%, #e90057 75%, #e30064 83.33%, #db0071 91.67%, #d10080 100%);    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contenedor-90{
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media (min-width: 480px) {
+    .contenedor-90{
+        width: 95%;
+    }
+    
+}
+
+.contenedor-60{
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* */
+.barra-superior{
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.barra-superior__contenido{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.circulos{
+    filter: invert(100%);
+    display: flex;
+    align-items: center;
+}
+
+.circulo{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: var(--negro);
+    margin: 0 .5;
+    margin: .2rem;
+
+    -webkit-box-shadow: 0px 2px 21px -4px rgba(0,0,0,0.06);
+    -moz-box-shadow: 0px 2px 21px -4px rgba(0,0,0,0.06);
+    box-shadow: 0px 2px 21px -4px rgba(0,0,0,0.06);
+}
+
+@media (min-width: 480px) {
+    .circulo{
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+}
+
+.glass-top{
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    z-index: 1;
+    width: 80%;
+}
+
+.glass-top p{
+    color: white;
+    text-align: end;
+    padding: 0 1rem;
+}
+
+.iconos{
+    filter: invert(100%);
+    display: flex;
+    align-items: center;
+}
+
+.icono{
+    width: 1rem;
+    margin: .1rem;
+}
+
+@media (min-width: 480px) {
+    .icono{
+        width: 1.2rem;
+    }
+}
+
+header h1{
+    color: white;
+    margin: 0;
+    text-transform: uppercase;
+    
+    font-size: 2.2rem;
+    font-weight: var(--Grueso);
+}
+
+@media (min-width: 480px) {
+    header h1{
+        padding-top: 2.5rem;
+        font-size: 3.5rem;
+    }
+}
+
+
+/* Inicio de navegacion*/
+
+.titulo-nombre{
+    margin-bottom: 0rem;
+}
+
+.contenedor-navegacion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenedor-navegacion h2{
+    font-size: 1rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+@media (min-width: 480px) {
+    .contenedor-navegacion h2{
+        font-size: 1.5rem;
+    }
+}
+
+.navegacion a{
+    color: white;
+    text-transform: uppercase;
+    font-weight: var(--Regular);
+    padding: 1rem;
+    font-size: .8rem;
+}
+
+@media (min-width: 480px) {
+    .navegacion a{
+        font-size: 1rem;
+    }
+}
+
+.navegacion a:hover{
+    opacity: 0.8;
+}
+
+/* Contenido principal */
+
+.contenido-principal{
+    margin-top: 1rem;
+    padding-bottom: 3rem;
+    display: grid;
+    grid-row: 2;
+    /*Exclusivo para tablet*/
+    text-align: center;
+}
+
+@media(min-width: 1280px){
+    .contenido-principal{
+        margin-top: 3rem;
+
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1rem;
+
+        text-align: left;
+    }
+}
+
+.imagenes_principal{
+    position: relative;
+}
+
+.figura{
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    width: 4rem;
+}
+
+.contenido-principal img{
+    border-radius: 50%;
+    transform: skew(10deg);
+    max-width: 60%;
+}
+
+.contenido-principal .retrato{
+   margin: 0 0 0 auto;
+}
+
+@media(min-width: 1280px){
+    .contenido-principal img{
+        border-radius: 50%;
+        max-width: 100%;
+    }    
+}
+
+.principal_texto h3{
+    padding-top: .5rem;
+    color: white;
+    font-size: 3rem;
+    margin: 0;
+}
+
+@media (min-width: 480px) {
+    .principal_texto h3{
+        font-size: 5rem;
+    }
+}
+
+@media(min-width: 1280px){
+    .principal_texto h3{
+        font-size: 10rem;
+    }
+}
+
+.principal_texto h4{
+    color: white;
+    font-size: 1.8rem;
+    font-weight: var(--Regular);
+    margin: 0;
+}
+
+@media(min-width: 480px){
+    .principal_texto h4{
+        font-size: 2rem;
+    }
+}
+
+@media(min-width: 1280px){
+    .principal_texto h4{
+        font-size: 3rem;
+    }
+}
+
+.principal_texto p{
+    color: white;
+    padding-top: .5rem;
+    line-height: 1.5;
+    font-size: 1rem;
+    font-weight: var(--Delgado);
+    margin: 0;
+}
+
+@media (min-width: 480px) {
+    .principal_texto p{
+        font-size: 1.5rem;
+    }
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 12rem;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .wave{
+        height: 8rem;
+    }
+    
+}
+
+@media (min-width: 1280px) {
+    .wave{
+        height: 12rem;
+    }
+    
+}
+
+
+/* 
+    Habilidades
+*/
+
+.habilidades-titulo{
+    display: inline-block;
+}
+
+.habilidades h3{
+    font-size: 4rem;
+    margin: 1rem 0;
+}
+
+.habilidades h4{
+    font-size: 2rem;
+    margin: 3rem 0 1rem 0;
+}
+
+.division{
+    border-radius: 5px;
+    height: .2rem;
+    width: 50%;
+    background-image: radial-gradient(circle at 50% -20.71%, #de9c2c 0, #e5922a 8.33%, #ea852b 16.67%, #ee772d 25%, #f16731 33.33%, #f35436 41.67%, #f23c3c 50%, #f01843 58.33%, #ed004c 66.67%, #e90057 75%, #e30064 83.33%, #db0071 91.67%, #d10080 100%);
+}
+
+
+/*Carta*/
+.cartas-logo{
+    display: flex;
+    gap: 1rem;
+}
+
+.carta-logo:first-of-type{
+    padding-left: 0;
+}
+
+.carta-logo img{
+   max-width: 10rem;
+   width: 100%;
+}
+
+.carta-logo{
+    padding: 2rem;
+    border-radius: 2%;  
+}
+
+.contenedor-carta-logo{
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: var(--Regular);
+}
+
+/*Proyectos*/
+
+.contenedor-titulo{
+    display: flex;
+}
+
+.division2{
+    border-radius: 5px;
+    height: .2rem;
+    width: 50%;
+    margin-left: auto;
+    background-image: radial-gradient(circle at 50% -20.71%, #de9c2c 0, #e5922a 8.33%, #ea852b 16.67%, #ee772d 25%, #f16731 33.33%, #f35436 41.67%, #f23c3c 50%, #f01843 58.33%, #ed004c 66.67%, #e90057 75%, #e30064 83.33%, #db0071 91.67%, #d10080 100%);
+}
+.proyectos-titulo{
+    display: inline-block;
+    margin-left: auto;
+    justify-content: right;
+}
+
+.proyectos h3{
+    margin: 1rem 0;   
+    font-size: 4rem;
+}
+
+.cartas-proyectos{
+    margin: 2rem 0;
+    display: flex;
+    justify-content: end;
+}
+
+.carta-proyecto{
+    width: 25rem;
+    height: 25rem;
+    border-radius: 5px;
+    background-color: var(--blanco);
+    border: .1rem rgba(128, 128, 128, 0.355) solid;
+
+}
+
+.imagen-proyecto{
+    height: 70%;
+    background-image: url(../img/PaginasWeb/walmart.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2px;
+}
+
+.texto-proyecto{
+    padding-right: 1rem;
+}
+
+.texto-proyecto h4{
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.entrada-proyecto{
+    margin: 1rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-proyecto p{
+    margin: .5rem 0 0 0;
+    font-size: 1rem;
+}
+
+.logo-proyecto img{
+    width: 2.5rem;
+    border-radius: 10rem;
+}
+
+.logo-proyecto img:hover{
+    cursor: pointer;
+}
+
+footer{
+    background-color: #000;
+    text-align: center;
+    padding-top: 1.5rem;
+    color: white;
+    height: 5.5rem;
+}
