@@ -455,8 +455,14 @@ header h1{
 }
 
 .carta-logo{
-    padding: 2rem;
+    padding: .8rem;
     border-radius: 2%;  
+}
+
+@media (min-width: 768px) {
+    .carta-logo{
+        padding: 2rem;
+    }    
 }
 
 .contenedor-carta-logo{
