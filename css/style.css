@@ -405,28 +405,12 @@ header h1 {
   }
 }
 
-.carta-logo:first-of-type {
-}
-
 .carta-logo img {
   max-width: 10rem;
   width: 100%;
 }
 
-.carta-logo {
-  min-width: 7.5rem;
-  border-radius: 2%;
-}
 
-@media (min-width: 768px) {
-  .carta-logo {
-  }
-}
-
-@media (min-width: 1280px) {
-  .carta-logo {
-  }
-}
 
 .contenedor-carta-logo {
   text-align: center;
@@ -673,8 +657,6 @@ header h1 {
   }
 }
 
-.titulo-preparacion {
-}
 
 @media (min-width: 1280px) {
   .titulo-preparacion {
@@ -753,9 +735,6 @@ header h1 {
   margin-top: 0.2rem;
 }
 
-.subtitulo-adicion {
-
-}
 
 @media (min-width: 780px) {
   .subtitulo-adicion {
