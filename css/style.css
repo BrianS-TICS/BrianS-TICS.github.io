@@ -414,10 +414,6 @@ header h1{
     }
 }
 
-.carta-logo:first-of-type{
-    
-}
-
 .carta-logo img{
    max-width: 10rem;
    width: 100%;
@@ -510,7 +506,7 @@ header h1{
 }
 
 .proyectos h3{
-    margin: 2rem 0 1rem 0;   
+    margin: 2rem 0 .2rem 0;   
     text-align: center;
     font-size: 3rem;
 }
@@ -552,7 +548,7 @@ header h1{
 
 @media (min-width: 1280px) {
     .cartas-proyectos{
-        grid-template-columns: repeat(4, auto);
+        grid-template-columns: repeat(3, auto);
         justify-content: center;
        
     }
@@ -568,10 +564,13 @@ header h1{
     max-height: 20rem;
     padding: 0;
     list-style: none;
+    
     display: grid;
     grid-template-columns: repeat(3, auto);
     align-items: center;
     justify-content: center;
+    
+
     gap: .5rem;
 }
 
@@ -613,6 +612,11 @@ header h1{
 .node{
     background-color: #5EC280;
 }
+
+/* .grid-centrado{
+    grid-column-start: -3;
+    grid-column-end: -2;
+} */
 
 .carta-proyecto{
     min-width: 15rem;
@@ -662,6 +666,120 @@ header h1{
     width: 100%;
 }
 
+/* Seccion preparacion */
+
+.preparaciones{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}
+
+.titulo-preparacion{
+    
+}
+
+@media (min-width: 1280px) {
+    .titulo-preparacion{
+        margin-top: 7rem;
+    }
+    .titulo-preparacion h3{
+        margin: 0;
+    }    
+}
+
+/* 
+    articulo preparacion
+ */
+
+ .section-preparacion{
+    margin-top: 3rem;
+    position: relative;
+    max-width:40rem;
+ }
+
+ .section-preparacion-contenido{
+    display: inline-block;
+    --shadow-color: 0deg 0% 63%;
+    --shadow-elevation-medium:
+    0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+    box-shadow: var(--shadow-elevation-medium);
+ }
+
+ .section-preparacion__hero{
+    background-image: url(../img/Imagenes-fondos/Tecnologico\ de\ culiacan.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    width: 30rem;
+    height: 10rem;
+ }
+
+.section-preparacion__descripcion{
+    padding: 1rem;
+}
+
+
+.gradiante-1{
+    background-image: linear-gradient(to right top, #2c80fd, #00a7ff, #00c3f5, #00d7b6, #2be36b);
+}
+
+.gradiante-2{
+    background-image: linear-gradient(to right, #253dde, #4037e5, #562feb, #6b21f0, #7f00f4);
+}
+
+.section-preparacion__descripcion .titulo{
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+.section-preparacion__descripcion .subtitulo{
+   font-size: 1rem;
+   font-weight: lighter; 
+   margin-top: .2rem;
+}
+
+.subtitulo-adicion{
+    max-width: 85%;
+}
+
+.section-preparacion__descripcion p{
+    font-size: 1rem;
+    text-align: left;
+    margin: 0;
+    color: var(--blanco);
+}
+
+.section-preparacion-adicion{
+    background-color: black;
+    position: absolute;
+    top: 3rem;
+    right: 5rem;
+    border-radius: 2px;
+    padding: 1rem;
+}
+
+.section-preparacion-adicion p{
+    text-align: center;
+    font-weight: normal;
+    margin: 0;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.lineado-corto{
+    line-height: .8;
+}
+
+.section-preparacion-adicion .adicion-subtitulo{
+    font-weight: bold;
+}
+
+.section-preparacion-adicion span{
+    font-size: 2.2rem;
+}
 
 footer{
     background-color: #000;
