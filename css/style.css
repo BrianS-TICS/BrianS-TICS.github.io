@@ -48,6 +48,12 @@ img {
   margin: 0 auto;
 }
 
+.logo-img{
+  width: 48px;
+  height: 48px;
+
+}
+
 .bg-1 {
   padding-top: 1rem;
   background-image: radial-gradient(
