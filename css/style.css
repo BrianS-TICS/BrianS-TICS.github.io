@@ -1,3 +1,4 @@
+
 :root {
   --color1: #5ec2a8;
   --color2: #6551a4;
@@ -228,12 +229,17 @@ header h1 {
 
 .contenido-principal img {
   border-radius: 50%;
-  transform: skew(10deg);
   max-width: 60%;
+  overflow: hidden;
 }
 
 .contenido-principal .retrato {
   margin: 0 0 0 auto;
+}
+
+.retrato:hover{
+    animation: jello; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
 }
 
 @media (min-width: 1280px) {
@@ -248,6 +254,10 @@ header h1 {
   color: white;
   font-size: 3rem;
   margin: 0;
+}
+
+.principal_texto::hover{
+  animation: forwards;
 }
 
 @media (min-width: 480px) {
@@ -288,6 +298,14 @@ header h1 {
   font-size: 1rem;
   font-weight: var(--Delgado);
   margin: 0;
+}
+
+.hola{
+  animation: tada;
+  display: inline-block;
+  animation-duration: 3s; /* don't forget to set a duration! */
+  animation-delay: 1s;
+  animation-iteration-count: 3;
 }
 
 @media (min-width: 480px) {
@@ -759,22 +777,13 @@ header h1 {
   background-color: black;
   position: absolute;
   top: calc(5%);
-  right: calc(0%);
+  right: calc(-2%);
   border-radius: 2px;
   padding: 1rem;
-
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-
-  justify-content: center;
-  align-items: center;
 }
 
 @media (min-width: 480px) {
   .section-preparacion-adicion {
-    display: block;
-
-    background-color: black;
     position: absolute;
     top: calc(50% - 8rem);
     right: -2rem;
