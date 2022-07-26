@@ -49,6 +49,10 @@ img {
   margin: 0 auto;
 }
 
+.limitar-80{
+  width: 80%;
+}
+
 .logo-img{
   width: 48px;
   height: 48px;
@@ -56,6 +60,7 @@ img {
 }
 
 .bg-1 {
+  z-index: 2;
   padding-top: 1rem;
   background-image: radial-gradient(
     circle at 50% -20.71%,
@@ -223,30 +228,57 @@ header h1 {
   }
 }
 
-.imagenes_principal {
+.imagen_principal{
   position: relative;
+  width: 14.5rem;
+  min-height: 17rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+  background-color: var(--blanco);
+  border-radius: 10rem;
 }
 
-.contenido-principal img {
-  border-radius: 50%;
-  max-width: 60%;
-  overflow: hidden;
+@media (min-width: 480px) {
+  .imagen_principal{
+    width: 23rem;
+    margin-top: 1rem;
+    border-radius: 10rem;
+
+    min-height: 28rem;
+  }
 }
 
-.contenido-principal .retrato {
-  margin: 0 0 0 auto;
-}
-
-.retrato:hover{
-    animation: jello; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s; /* don't forget to set a duration! */
-}
 
 @media (min-width: 1280px) {
-  .contenido-principal img {
-    border-radius: 50%;
-    max-width: 100%;
+  .imagen_principal{
+    width: 25rem;
+    margin-top: 1rem;
   }
+}
+
+.imagen-mia{
+  position: absolute;
+  bottom: 0rem;
+  left: 0rem;
+}
+
+@media (min-width: 480px) {
+  .imagen-mia{
+    position: absolute;
+    bottom: calc(50% - 14rem);
+    left: 0rem;
+  }
+}
+
+.imagen_principal img{
+   width: 100%; 
+   border-radius: 7.2rem;
+}
+
+@media (min-width: 480px) {
+  .imagen_principal img{
+    border-radius: 10rem;
+ }
 }
 
 .principal_texto h3 {
@@ -321,6 +353,7 @@ header h1 {
   left: 0;
   right: 0;
 
+  z-index: -1;
   height: 5rem;
   width: 100%;
 }
@@ -614,6 +647,9 @@ header h1 {
 } */
 
 .carta-proyecto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   min-width: 15rem;
   min-height: 20rem;
   padding: 1rem;
@@ -666,6 +702,7 @@ header h1 {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(1, auto);
+  margin-top: 2rem;
 }
 
 @media (min-width: 780px) {
@@ -713,13 +750,20 @@ header h1 {
 }
 
 .section-preparacion__hero {
-  background-image: url(../img/Imagenes-fondos/Tecnologico\ de\ culiacan.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 
   width: auto;
   height: 10rem;
+}
+
+.bg-tec{
+  background-image: url(../img/Imagenes-fondos/Tecnologico\ de\ culiacan.webp);
+}
+
+.bg-desarrolloWeb{
+  background-image: url(../img/Imagenes-fondos/Portada-700x400.jpg);
 }
 
 .section-preparacion__descripcion {
@@ -776,7 +820,7 @@ header h1 {
 .section-preparacion-adicion {
   background-color: black;
   position: absolute;
-  top: calc(5%);
+  top: -2rem;
   right: calc(-2%);
   border-radius: 2px;
   padding: 1rem;
@@ -785,7 +829,7 @@ header h1 {
 @media (min-width: 480px) {
   .section-preparacion-adicion {
     position: absolute;
-    top: calc(50% - 8rem);
+    top: -2rem;
     right: -2rem;
     border-radius: 2px;
     padding: 1rem;
