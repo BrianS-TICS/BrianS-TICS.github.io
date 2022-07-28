@@ -12,6 +12,10 @@
   --Grueso: 700;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: white;
   font-family: var(--fuente);
@@ -46,6 +50,11 @@ a {
 img {
   width: auto;
   margin: 0 auto;
+  width: 100%;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .limitar-80 {
@@ -80,6 +89,7 @@ img {
   background-size: cover;
   padding-bottom: 3rem;
   position: relative;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
@@ -165,6 +175,16 @@ header h1 {
     margin-bottom: 0rem;
     text-align: left;
     padding-top: 1rem;
+  }
+}
+
+.navegacion {
+  display: none;
+}
+
+@media (min-width: 880px) {
+  .navegacion {
+    display: block;
   }
 }
 
@@ -285,10 +305,6 @@ header h1 {
   margin: 0;
 }
 
-.principal_texto::hover {
-  animation: forwards;
-}
-
 @media (min-width: 480px) {
   .principal_texto h3 {
     font-size: 5rem;
@@ -329,14 +345,6 @@ header h1 {
   margin: 0;
 }
 
-.hola {
-  animation: tada;
-  display: inline-block;
-  animation-duration: 3s; /* don't forget to set a duration! */
-  animation-delay: 1s;
-  animation-iteration-count: 3;
-}
-
 @media (min-width: 480px) {
   .principal_texto p {
     font-size: 1.5rem;
@@ -364,6 +372,49 @@ header h1 {
 @media (min-width: 1280px) {
   .wave {
     height: 15rem;
+  }
+}
+
+/*Navegacion movil*/
+
+.navegacion-movil {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.792);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  /* border-top-left-radius: 10px;
+  border-top-right-radius: 10px; */
+  z-index:4;
+}
+
+.enlace {
+  padding: 0 1rem;
+  width: 5rem;
+  text-align: center;
+}
+
+.enlace img{
+  width: 50%;
+}
+
+.enlace p{
+  font-size: 1rem;
+  margin: 0;
+  color: white;
+}
+
+@media (min-width: 880px) {
+  .navegacion-movil {
+    display: none;
   }
 }
 
@@ -489,6 +540,9 @@ header h1 {
 }
 
 /*Proyectos*/
+.proyectos {
+  overflow: hidden;
+}
 
 .contenedor-titulo {
   display: flex;
@@ -693,7 +747,30 @@ header h1 {
 
 /* Seccion preparacion */
 
-.preparaciones {
+/* 
+    Habilidades
+*/
+
+@media (min-width: 1280px) {
+  .preparacion-titulo {
+    display: inline-block;
+  }
+}
+
+.preparacion h3 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 0 0;
+}
+
+@media (min-width: 1280px) {
+  .preparacion h3 {
+    font-size: 4rem;
+    margin: 1rem 0;
+  }
+}
+
+.preparaciones{
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(1, auto);
@@ -717,6 +794,7 @@ header h1 {
   .titulo-preparacion {
     margin-top: 7rem;
   }
+
   .titulo-preparacion h3 {
     margin: 0;
   }
