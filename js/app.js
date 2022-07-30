@@ -49,7 +49,7 @@ const bg = document.querySelector('.bg-1');
         ease: "power2.out"
         }
     });
-    timeLineFondo.to(bg,{ x: 400,opacity: 0, skewY: 20});
+    timeLineFondo.to(bg,{ y: -50,opacity: 0, skewY: -10, });
 
 function animabg(){
     

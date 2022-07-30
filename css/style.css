@@ -353,7 +353,7 @@ header h1 {
 
 .wave {
   position: absolute;
-  display: inline;
+
   bottom: 0;
   left: 0;
   right: 0;
@@ -371,7 +371,7 @@ header h1 {
 
 @media (min-width: 1280px) {
   .wave {
-    height: 15rem;
+    height: 20rem;
   }
 }
 
@@ -381,9 +381,9 @@ header h1 {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 5rem;
+  height: 3.5rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 
   background: rgba(0, 0, 0, 0.792);
@@ -396,20 +396,48 @@ header h1 {
   z-index:4;
 }
 
+@media (min-width: 480px) {
+  .navegacion-movil {
+    justify-content: center;
+    height: 5rem;
+  }
+}
+
 .enlace {
-  padding: 0 1rem;
-  width: 5rem;
+  padding: 0 0rem;
+  width: 4rem;
+  height: auto;
   text-align: center;
 }
 
 .enlace img{
-  width: 50%;
+  width: 40%;
+}  
+
+@media (min-width: 480px) {
+  .enlace {
+    padding: 0 1rem;
+    width: 5rem;
+    text-align: center;
+  }
+  .enlace img{
+    width: 50%;
+  }  
 }
 
+
 .enlace p{
-  font-size: 1rem;
+  font-size: .7rem;
   margin: 0;
   color: white;
+}
+
+@media (min-width: 480px) {
+  .enlace p{
+    font-size: 1rem;
+
+  }
+  
 }
 
 @media (min-width: 880px) {
@@ -831,11 +859,11 @@ header h1 {
 }
 
 .bg-tec {
-  background-image: url(../img/Imagenes-fondos/Tecnologico\ de\ culiacan.webp);
+  background-image: url(../img/Pictures/educacion/ingenieriaEnTics.webp);
 }
 
 .bg-desarrolloWeb {
-  background-image: url(../img/Imagenes-fondos/Portada-700x400.jpg);
+  background-image: url(../img/Pictures/educacion/desarrolloWebCompleto.jpg);
 }
 
 .section-preparacion__descripcion {
