@@ -56,6 +56,8 @@ a {
   color: var(--negro);
 }
 
+a { -webkit-tap-highlight-color: rgba(0,0,0,0); }
+
 img {
   width: auto;
   margin: 0 auto;
@@ -272,9 +274,16 @@ header h1 {
   min-height: 12rem;
   margin: 0 auto;
   margin-top: 1rem;
-  background-color: var(--blanco);
+  background-color: rgba(0, 0, 0, 0.155);
+
   border-radius: 10rem;
+
 }
+
+.imagen_principal:hover{
+    transform: rotate(10%);
+}
+
 
 @media (min-width: 480px) {
   .imagen_principal {
@@ -800,6 +809,16 @@ header h1 {
 /* 
     Habilidades
 */
+
+.navegacion-movil{
+  /* transition-property: display-none;
+  transition-delay: 1s;
+  transition-duration: 1s; */
+}
+
+.display-none{
+  display: none
+}
 
 .preparacion{
   padding-top: 1rem;

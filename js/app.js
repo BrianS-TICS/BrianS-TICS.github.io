@@ -2,15 +2,27 @@ gsap.registerPlugin(ScrollTrigger);
 
 addEvents();
 
-// SCROll
-// window.scroll({
-//     top: 100,
-//     left: 100,
-//     behavior: 'smooth'
-//   });
+let posicionEnScreen =  window.scrollY;
+
+window.onscroll = function() {
+    const navegacionMovil = document.querySelector('.navegacion-movil');
+
+    if (posicionEnScreen < window.scrollY) {
+        navegacionMovil.classList.add('desaparecer', 'display-none');
+        posicionEnScreen = window.scrollY;
+    }
+    if (posicionEnScreen > window.scrollY) {
+        navegacionMovil.classList.remove('desaparecer', 'display-none');
+        posicionEnScreen = window.scrollY;
+    }
+};
 
 function addEvents(){
     document.addEventListener('DOMContentLoaded', playAnimaciones);
+}
+
+function ocultaNavegacionMovil(e) {
+    console.log(e);
 }
 
 function playAnimaciones(){
@@ -21,6 +33,7 @@ function playAnimaciones(){
     // Linas de tiempo
     const timelineInicio = gsap.timeline( {defaults: { skewX: 45, duration: 2.5, ease: "back.out(1.7)", opacity : 0} });
 
+
     timelineInicio
         .from(imgPresentacion,{x: -100, y: 50,})
         .from(txtPresentacion,{x: 100, y: 50,}, "-=2.5");
@@ -28,18 +41,6 @@ function playAnimaciones(){
 
 const bg = document.querySelector('.bg-1');
     
-    // const timeLineFondo = gsap.timeline( {y: -1500, opacity: 0} );
-
-    // timeLineFondo
-    // .to(bg,{ scrollTrigger: {
-    //     trigger: bg,
-    //     markers: true,
-    //     start : "10% 5%",
-    //     end: "=+200% 100%",
-    //     scrub : 5,
-    // } });
-
-
     let timeLineFondo = gsap.timeline({
         scrollTrigger:{
         trigger: bg,
