@@ -1,6 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
-addEvents();
+//addEvents();
 
 let posicionEnScreen =  window.scrollY;
 
@@ -17,27 +17,23 @@ window.onscroll = function() {
     }
 };
 
-function addEvents(){
-    document.addEventListener('DOMContentLoaded', playAnimaciones);
-}
+//function addEvents(){
+   // document.addEventListener('DOMContentLoaded', playAnimaciones);
+//}
 
-function ocultaNavegacionMovil(e) {
-    console.log(e);
-}
+//function playAnimaciones(){
+    // // Selectores DOM
+    // const imgPresentacion = document.querySelector('#imagen-presentacion');
+    // const txtPresentacion = document.querySelector('#principal_texto');
 
-function playAnimaciones(){
-    // Selectores DOM
-    const imgPresentacion = document.querySelector('#imagen-presentacion');
-    const txtPresentacion = document.querySelector('#principal_texto');
-
-    // Linas de tiempo
-    const timelineInicio = gsap.timeline( {defaults: { skewX: 45, duration: 2.5, ease: "back.out(1.7)", opacity : 0} });
+    // // Linas de tiempo
+    // const timelineInicio = gsap.timeline( {defaults: { skewX: 45, duration: 2.5, ease: "back.out(1.7)", opacity : 0} });
 
 
-    timelineInicio
-        .from(imgPresentacion,{x: -100, y: 50,})
-        .from(txtPresentacion,{x: 100, y: 50,}, "-=2.5");
-}
+    // timelineInicio
+    //     .from(imgPresentacion,{x: -100, y: 50,})
+    //     .from(txtPresentacion,{x: 100, y: 50,}, "-=2.5");
+//}
 
 const bg = document.querySelector('.bg-1');
     
@@ -51,10 +47,6 @@ const bg = document.querySelector('.bg-1');
         }
     });
     timeLineFondo.to(bg,{ y: -50,opacity: 0, skewY: -10, });
-
-function animabg(){
-    
-}
 
 let tlsHabilidades = gsap.timeline({
     scrollTrigger:{
