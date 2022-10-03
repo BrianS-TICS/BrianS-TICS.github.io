@@ -407,6 +407,9 @@ header h1 {
 /*Navegacion movil*/
 
 .navegacion-movil {
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -810,10 +813,32 @@ header h1 {
     Habilidades
 */
 
-.navegacion-movil{
-  /* transition-property: display-none;
-  transition-delay: 1s;
-  transition-duration: 1s; */
+.aparecer-barra{
+  animation-duration: 1s;
+  animation-name: aparecer;
+}
+
+.desaparecer-barra{
+  animation-duration: 1s;
+  animation-name: desaparecer;
+}
+
+@keyframes aparecer{
+  0%{
+    transform: scale(0%);
+  }
+  100%{
+    transform: scale(100%);
+  }
+}
+
+@keyframes desaparecer{
+  0%{
+    transform: scale(100%);
+  }
+  100%{
+    transform: scale(0%);
+  }
 }
 
 .display-none{

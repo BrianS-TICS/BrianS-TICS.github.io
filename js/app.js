@@ -5,14 +5,20 @@ gsap.registerPlugin(ScrollTrigger);
 let posicionEnScreen =  window.scrollY;
 
 window.onscroll = function() {
+    console.log(posicionEnScreen);
     const navegacionMovil = document.querySelector('.navegacion-movil');
+     // RESTA ES IGUAL A SCROLL HACIA arriba
+    if ( (posicionEnScreen + 25 ) < window.scrollY) {
+        navegacionMovil.classList.add('desaparecer-barra', 'display-none');
 
-    if ((posicionEnScreen + 50) < window.scrollY) {
-        navegacionMovil.classList.add('desaparecer', 'display-none');
         posicionEnScreen = window.scrollY;
     }
-    if ( ( posicionEnScreen - 50 ) > window.scrollY) {
-        navegacionMovil.classList.remove('desaparecer', 'display-none');
+    // SUMA ES IGUAL A SCROLL HACIA abajo
+    if ( ( posicionEnScreen - 25 ) > window.scrollY) {
+        navegacionMovil.classList.add('aparecer-barra');
+        navegacionMovil.classList.remove('desaparecer-barra');
+        navegacionMovil.classList.remove('display-none');
+
         posicionEnScreen = window.scrollY;
     }
 };
