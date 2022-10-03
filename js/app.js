@@ -9,15 +9,30 @@ window.onscroll = function() {
     const navegacionMovil = document.querySelector('.navegacion-movil');
      // RESTA ES IGUAL A SCROLL HACIA arriba
     if ( (posicionEnScreen + 25 ) < window.scrollY) {
-        navegacionMovil.classList.add('desaparecer-barra', 'display-none');
+        navegacionMovil.classList.add('desaparecer-barra');
+        
+        const desaparicion = document.querySelector('.desaparecer-barra');
+        
+        setTimeout(() => {
+            navegacionMovil.classList.add('display-none');
+        }, 1000);
+
+        desaparicion.addEventListener("animationend", () => {
+            
+        })
+
+        /* Para desparecer 
+            Lo que tengo que hacer es seleccionar por la clase que tiene la animacion
+            con un queyselector y no por el mismo query de navegacion
+        */
 
         posicionEnScreen = window.scrollY;
     }
     // SUMA ES IGUAL A SCROLL HACIA abajo
     if ( ( posicionEnScreen - 25 ) > window.scrollY) {
-        navegacionMovil.classList.add('aparecer-barra');
         navegacionMovil.classList.remove('desaparecer-barra');
         navegacionMovil.classList.remove('display-none');
+        navegacionMovil.classList.add('aparecer-barra');
 
         posicionEnScreen = window.scrollY;
     }
