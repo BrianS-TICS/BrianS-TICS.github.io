@@ -7,11 +7,11 @@ let posicionEnScreen =  window.scrollY;
 window.onscroll = function() {
     const navegacionMovil = document.querySelector('.navegacion-movil');
 
-    if (posicionEnScreen < window.scrollY) {
+    if ((posicionEnScreen + 50) < window.scrollY) {
         navegacionMovil.classList.add('desaparecer', 'display-none');
         posicionEnScreen = window.scrollY;
     }
-    if (posicionEnScreen > window.scrollY) {
+    if ( ( posicionEnScreen - 50 ) > window.scrollY) {
         navegacionMovil.classList.remove('desaparecer', 'display-none');
         posicionEnScreen = window.scrollY;
     }
