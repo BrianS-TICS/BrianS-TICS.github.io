@@ -10,6 +10,9 @@ window.onscroll = function() {
      // RESTA ES IGUAL A SCROLL HACIA arriba
     if ( (posicionEnScreen + 25 ) < window.scrollY) {
         navegacionMovil.classList.add('desaparecer-barra');
+        navegacionMovil.addEventListener("animationend", () => [
+            
+        ])
         
         const desaparicion = document.querySelector('.desaparecer-barra');
         
