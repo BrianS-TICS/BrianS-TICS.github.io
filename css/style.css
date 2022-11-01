@@ -553,7 +553,7 @@ header h1 {
 /*Carta*/
 .cartas-logo {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(2, auto);
   text-align: center;
   justify-content: space-around;
   row-gap: 1.5rem;
